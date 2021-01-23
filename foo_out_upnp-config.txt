@@ -1,0 +1,51 @@
+# defaults that apply to every device
+stream-title=foobar2000 audio stream
+# default preferred format, can be overridden per-device; available are: FLAC, WAV, LPCM
+# default to FLAC where supported
+preferred-format=FLAC
+# Various devices fail to pause on what they assume to be a live stream, require a stop command
+# Can be overridden to true for specific devices
+supports-pause=false
+# Default to FLAC not supported even if the device claims otherwise
+# Many report that they support FLAC yet fail to play an infinite length FLAC stream
+supports-FLAC=false
+
+# Linn fixes
+manufacturer=Linn Products Ltd
+# Linn accepts WAV with 0 length in headers 
+zero-length-WAV=true
+send-accept-ranges=false
+supports-FLAC=true
+
+# Specific Sony device fixes
+manufacturer=Sony Corporation
+model=HT-XT3
+supports-infinite-length=false
+
+manufacturer=XBMC Foundation
+model=Kodi
+supports-pause=true
+supports-FLAC=true
+
+manufacturer=Michael Pujos
+model=foobar2000 Media Renderer
+supports-pause=true
+supports-FLAC=true
+
+manufacturer=Lautsprecher Teufel GmbH
+reports-time=false
+
+manufacturer=Sonos, Inc.
+supports-FLAC=true
+
+manufacturer=Logitech
+model=Squeezebox
+preferred-format=FLAC
+supports-pause=true
+supports-FLAC=true
+
+manufacturer=Bose
+model=Bose Soundbar 700
+prefered-format=FLAC
+supports-FLAC=true
+supports-pause=true
